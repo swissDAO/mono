@@ -17,6 +17,11 @@ const navigation = [
     target: '_blank',
   },
   { name: 'Tutorials', href: '/tutorials/main' },
+  {
+    name: 'Courses',
+    href: 'https://swissdao.notion.site/Courses-067249204b0544838290803aa9de1923',
+    target: '_blank',
+  },
   // { name: 'Blog', href: '/#' },
   // { name: 'Podcast', href: '#' },
 ];

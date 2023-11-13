@@ -7,6 +7,6 @@ export function ContributorQuest() {
     <iframe
       className="h-screen w-screen"
       src="https://jzq6e3gtmi4.typeform.com/contributor"
-    ></iframe>
+    />
   );
 }
