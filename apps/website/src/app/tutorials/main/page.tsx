@@ -17,12 +17,10 @@ const values = [
     description:
       'Learn how to build your own compressed NFT collection and put them to use in a Storefront like scenario using Solana Pay.',
     url: '/tutorials/solana-pay-cnfts',
-  }
+  },
 ];
 
-
 export default function Tutorials() {
-
   return (
     <div className="bg-white">
       <main className="isolate">
@@ -104,7 +102,6 @@ export default function Tutorials() {
             </div>
           </div>
         </div>
-        
 
         {/* Tutorial section */}
         <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
@@ -113,9 +110,11 @@ export default function Tutorials() {
               Our Tutorials
             </h2>
             <p className="mt-6 text-lg leading-8 text-gray-600">
-              Our tutorials are designed to help you get started with Web3, all of the builds are open-sourced on our GitHub.
-              If you want to contribute to our tutorials all you have to do is open a pull request.
-              Once completed, make sure you tag us on Twitter so we can share your work with the community.
+              Our tutorials are designed to help you get started with Web3, all
+              of the builds are open-sourced on our GitHub. If you want to
+              contribute to our tutorials all you have to do is open a pull
+              request. Once completed, make sure you tag us on Twitter so we can
+              share your work with the community.
             </p>
           </div>
           <dl className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 pb-32 text-base leading-7 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3">
@@ -133,7 +132,6 @@ export default function Tutorials() {
             ))}
           </dl>
         </div>
-
       </main>
     </div>
   );

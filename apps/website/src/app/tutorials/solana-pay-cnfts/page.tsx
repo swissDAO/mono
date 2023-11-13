@@ -1,27 +1,27 @@
-"use client";
-import React, { useState, useEffect } from "react";
-import { remark } from "remark";
-import html from "remark-html";
-import style from "../../../../styles/markdown.module.css";
+'use client';
+import React, { useState, useEffect } from 'react';
+import { remark } from 'remark';
+import html from 'remark-html';
+import style from '../../../../styles/markdown.module.css';
 
 const Tutorial: React.FC = () => {
   const [loading, setLoading] = useState(true);
   const [urlIndex, setUrlIndex] = useState(0);
   const [urlList, setUrlList] = useState<string[]>([]);
-  const [markdown, setMarkdown] = useState("");
-  const [styledMarkdown, setStyledMarkdown] = useState("");
-  
+  const [markdown, setMarkdown] = useState('');
+  const [styledMarkdown, setStyledMarkdown] = useState('');
+
   async function fetchMarkdowns() {
     const map = await fetch(
-      "https://raw.githubusercontent.com/swissDAO/solana-pay-cnfts/main/map.json",
+      'https://raw.githubusercontent.com/swissDAO/solana-pay-cnfts/main/map.json'
     );
     const map_json = await map.json();
     console.log(map_json);
 
-    const urls = Object.keys(map_json).map((key) => {
+    const urls = Object.keys(map_json).map(key => {
       return `https://raw.githubusercontent.com/swissDAO/solana-pay-cnfts/main/${key.slice(
         0,
-        9,
+        9
       )}/${map_json[key]}`;
     });
     setUrlList(urls);
@@ -48,11 +48,10 @@ const Tutorial: React.FC = () => {
 
   const renderMarkdown = () => {
     return (
-      <div 
+      <div
         dangerouslySetInnerHTML={{ __html: styledMarkdown }}
         className={style.markdown}
-      >
-      </div>
+      ></div>
     );
   };
 
@@ -73,12 +72,8 @@ const Tutorial: React.FC = () => {
   }, [urlIndex]);
 
   return (
-    <div
-      className={style.parentContainer}
-    >
-      <div
-        className={style.buttonContainer}
-      >
+    <div className={style.parentContainer}>
+      <div className={style.buttonContainer}>
         {urlIndex > 0 ? (
           <button
             onClick={() => {
@@ -104,14 +99,12 @@ const Tutorial: React.FC = () => {
           <></>
         )}
       </div>
-      {loading && styledMarkdown != "" ? (
+      {loading && styledMarkdown != '' ? (
         <div>Loading...</div>
       ) : (
         renderMarkdown()
       )}
-      <div
-        className={style.buttonContainer}
-      >
+      <div className={style.buttonContainer}>
         {urlIndex > 0 ? (
           <button
             onClick={() => {
