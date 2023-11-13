@@ -12,6 +12,8 @@
     "@headlessui/react": "1.7.17",
     "@heroicons/react": "2.0.18",
     "next": "13.4.19",
+    "remark": "^15.0.1",
+    "remark-html": "^16.0.1",
     "ui": "*"
   },
   "devDependencies": {
