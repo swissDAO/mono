@@ -1,11 +1,33 @@
 /* Containers ****************************************** */
 .parentContainer {
     display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .sideNavContainer {
+    position: sticky;
+    top: 0;
+    padding-top: 20px;
+    padding-left: 5px;
+    display: flex;
+    flex-direction: column;
+    width: 20vw;
+    gap: 20px;
+  }
+
+  .sideNavContainer > div > li {
+    cursor: pointer;
+    font-size: 12px;
+  }
+
+  .tutorialContainer {
+    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 100%;
-    padding: 40px;
+    width: 80vw;
   }
   
   .buttonContainer {
